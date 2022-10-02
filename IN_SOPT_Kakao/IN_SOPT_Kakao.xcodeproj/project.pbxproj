@@ -21,6 +21,8 @@
 		EC059B9128E8A40F000E24F1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC059B9028E8A40F000E24F1 /* SnapKit */; };
 		EC059B9428E8A423000E24F1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EC059B9328E8A423000E24F1 /* RxCocoa */; };
 		EC059B9628E8A423000E24F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC059B9528E8A423000E24F1 /* RxSwift */; };
+		EC059B9828E8A522000E24F1 /* KakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059B9728E8A522000E24F1 /* KakaoButton.swift */; };
+		EC059B9A28E8A614000E24F1 /* KakaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059B9928E8A614000E24F1 /* KakaoTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		EC059B8528E8A232000E24F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC059B8828E8A27E000E24F1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EC059B8A28E8A29B000E24F1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		EC059B9728E8A522000E24F1 /* KakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoButton.swift; sourceTree = "<group>"; };
+		EC059B9928E8A614000E24F1 /* KakaoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				EC059B8828E8A27E000E24F1 /* BaseView.swift */,
+				EC059B9728E8A522000E24F1 /* KakaoButton.swift */,
+				EC059B9928E8A614000E24F1 /* KakaoTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -353,9 +359,11 @@
 			files = (
 				EC059B8628E8A232000E24F1 /* SignUpViewController.swift in Sources */,
 				EC059B8B28E8A29B000E24F1 /* SignUpView.swift in Sources */,
+				EC059B9A28E8A614000E24F1 /* KakaoTextField.swift in Sources */,
 				EC059B4D28E89FB1000E24F1 /* AppDelegate.swift in Sources */,
 				EC059B4F28E89FB1000E24F1 /* SceneDelegate.swift in Sources */,
 				EC059B8928E8A27E000E24F1 /* BaseView.swift in Sources */,
+				EC059B9828E8A522000E24F1 /* KakaoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

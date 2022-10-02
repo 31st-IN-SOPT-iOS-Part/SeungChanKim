@@ -8,6 +8,7 @@
 import UIKit
 
 class BaseView: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -22,4 +23,3 @@ class BaseView: UIView {
     func setupView() {}
     func setupConstraints() {}
 }
-
