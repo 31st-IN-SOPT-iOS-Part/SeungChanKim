@@ -23,6 +23,11 @@
 		EC059B9628E8A423000E24F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC059B9528E8A423000E24F1 /* RxSwift */; };
 		EC059B9828E8A522000E24F1 /* KakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059B9728E8A522000E24F1 /* KakaoButton.swift */; };
 		EC059B9A28E8A614000E24F1 /* KakaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059B9928E8A614000E24F1 /* KakaoTextField.swift */; };
+		EC059BA028E9B36E000E24F1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059B9F28E9B36E000E24F1 /* SignInView.swift */; };
+		EC059BA228E9B376000E24F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BA128E9B376000E24F1 /* SignInViewController.swift */; };
+		EC059BA728E9E0D2000E24F1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BA628E9E0D2000E24F1 /* UserViewController.swift */; };
+		EC059BA928E9E0E2000E24F1 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BA828E9E0E2000E24F1 /* UserView.swift */; };
+		EC059BAB28E9EE0A000E24F1 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		EC059B8A28E8A29B000E24F1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EC059B9728E8A522000E24F1 /* KakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoButton.swift; sourceTree = "<group>"; };
 		EC059B9928E8A614000E24F1 /* KakaoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTextField.swift; sourceTree = "<group>"; };
+		EC059B9F28E9B36E000E24F1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		EC059BA128E9B376000E24F1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EC059BA628E9E0D2000E24F1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		EC059BA828E9E0E2000E24F1 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,8 @@
 		EC059B7C28E89FE8000E24F1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EC059BA328E9E092000E24F1 /* User */,
+				EC059B9B28E9B351000E24F1 /* SignIn */,
 				EC059B7F28E8A17D000E24F1 /* SignUp */,
 			);
 			path = Presentation;
@@ -209,11 +221,86 @@
 		EC059B8728E8A271000E24F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EC059B8828E8A27E000E24F1 /* BaseView.swift */,
+				EC059BAE28E9EE78000E24F1 /* Base */,
+				EC059BAD28E9EE71000E24F1 /* Extension */,
+				EC059BAC28E9EE57000E24F1 /* DesignSystem */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EC059B9B28E9B351000E24F1 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EC059B9C28E9B357000E24F1 /* View */,
+				EC059B9D28E9B35A000E24F1 /* ViewController */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		EC059B9C28E9B357000E24F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC059B9F28E9B36E000E24F1 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC059B9D28E9B35A000E24F1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC059BA128E9B376000E24F1 /* SignInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC059BA328E9E092000E24F1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EC059BA428E9E09E000E24F1 /* View */,
+				EC059BA528E9E0A1000E24F1 /* ViewController */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		EC059BA428E9E09E000E24F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC059BA828E9E0E2000E24F1 /* UserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC059BA528E9E0A1000E24F1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC059BA628E9E0D2000E24F1 /* UserViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC059BAC28E9EE57000E24F1 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
 				EC059B9728E8A522000E24F1 /* KakaoButton.swift */,
 				EC059B9928E8A614000E24F1 /* KakaoTextField.swift */,
 			);
-			path = Common;
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		EC059BAD28E9EE71000E24F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EC059BAE28E9EE78000E24F1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC059B8828E8A27E000E24F1 /* BaseView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,13 +444,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC059BA928E9E0E2000E24F1 /* UserView.swift in Sources */,
 				EC059B8628E8A232000E24F1 /* SignUpViewController.swift in Sources */,
+				EC059BA728E9E0D2000E24F1 /* UserViewController.swift in Sources */,
 				EC059B8B28E8A29B000E24F1 /* SignUpView.swift in Sources */,
 				EC059B9A28E8A614000E24F1 /* KakaoTextField.swift in Sources */,
 				EC059B4D28E89FB1000E24F1 /* AppDelegate.swift in Sources */,
 				EC059B4F28E89FB1000E24F1 /* SceneDelegate.swift in Sources */,
+				EC059BA228E9B376000E24F1 /* SignInViewController.swift in Sources */,
 				EC059B8928E8A27E000E24F1 /* BaseView.swift in Sources */,
+				EC059BA028E9B36E000E24F1 /* SignInView.swift in Sources */,
 				EC059B9828E8A522000E24F1 /* KakaoButton.swift in Sources */,
+				EC059BAB28E9EE0A000E24F1 /* UITextField + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

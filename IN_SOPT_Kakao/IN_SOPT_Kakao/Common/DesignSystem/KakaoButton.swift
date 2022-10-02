@@ -41,7 +41,7 @@ final class KakaoButton: UIButton {
             self.setButton(text: "카카오 계정 또는 비밀번호 찾기", size: 12, color: .white)
             
         case .confirm:
-            self.setButton(text: "확인", size: 10, color: .yellow)
+            self.setButton(text: "확인", size: 10, color: .systemYellow)
         }
     }
     

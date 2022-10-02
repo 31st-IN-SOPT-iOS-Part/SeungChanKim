@@ -33,6 +33,7 @@ final class KakaoTextField: UIView {
         self.mode = mode
         super.init(frame: frame)
         
+        textField.addLeftPadding()
         setupMode(mode: mode)
         setupView()
         setupConstraints()
