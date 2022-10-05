@@ -16,9 +16,9 @@ final class SignInView: BaseView {
         $0.text = "카카오톡을 시작합니다"
         $0.font = .systemFont(ofSize: 22, weight: .regular)
     }
-    private lazy var emailTextField = KakaoTextField(frame: CGRect(), mode: .email)
-    private lazy var passwordTextField = KakaoTextField(frame: CGRect(), mode: .password)
-    private lazy var checkingPasswordTextField = KakaoTextField(frame: CGRect(), mode: .checkingPassword)
+    lazy var emailTextField = KakaoTextField(frame: CGRect(), mode: .email)
+    lazy var passwordTextField = KakaoTextField(frame: CGRect(), mode: .password)
+    lazy var checkingPasswordTextField = KakaoTextField(frame: CGRect(), mode: .checkingPassword)
     lazy var newAccountButton = KakaoButton(frame: CGRect(), mode: .newAccount)
     
     override func setupView() {

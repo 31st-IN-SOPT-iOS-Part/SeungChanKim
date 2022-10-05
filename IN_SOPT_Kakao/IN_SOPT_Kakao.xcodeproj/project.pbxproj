@@ -28,6 +28,18 @@
 		EC059BA728E9E0D2000E24F1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BA628E9E0D2000E24F1 /* UserViewController.swift */; };
 		EC059BA928E9E0E2000E24F1 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BA828E9E0E2000E24F1 /* UserView.swift */; };
 		EC059BAB28E9EE0A000E24F1 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */; };
+		EC059C2C28ED583A000E24F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C2B28ED583A000E24F1 /* BaseViewController.swift */; };
+		EC059C2E28ED598A000E24F1 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C2D28ED598A000E24F1 /* ViewModelType.swift */; };
+		EC059C3028ED59E5000E24F1 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C2F28ED59E5000E24F1 /* SignUpViewModel.swift */; };
+		EC059C3228ED5C07000E24F1 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3128ED5C07000E24F1 /* String + Extension.swift */; };
+		EC059C3428ED6273000E24F1 /* UIButton + RxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3328ED6273000E24F1 /* UIButton + RxExtension.swift */; };
+		EC059C3728ED652A000E24F1 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = EC059C3628ED652A000E24F1 /* Toast */; };
+		EC059C3928ED69F2000E24F1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3828ED69F2000E24F1 /* Coordinator.swift */; };
+		EC059C3B28ED6A19000E24F1 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3A28ED6A19000E24F1 /* CoordinatorDelegate.swift */; };
+		EC059C3D28ED6A53000E24F1 /* CoordinatorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3C28ED6A53000E24F1 /* CoordinatorCase.swift */; };
+		EC059C4028ED6E39000E24F1 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C3F28ED6E39000E24F1 /* SignUpCoordinator.swift */; };
+		EC059C4328ED70E4000E24F1 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C4228ED70E3000E24F1 /* UserViewModel.swift */; };
+		EC059C4628ED8495000E24F1 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC059C4528ED8495000E24F1 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +81,17 @@
 		EC059BA628E9E0D2000E24F1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		EC059BA828E9E0E2000E24F1 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
+		EC059C2B28ED583A000E24F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EC059C2D28ED598A000E24F1 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		EC059C2F28ED59E5000E24F1 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		EC059C3128ED5C07000E24F1 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		EC059C3328ED6273000E24F1 /* UIButton + RxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + RxExtension.swift"; sourceTree = "<group>"; };
+		EC059C3828ED69F2000E24F1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EC059C3A28ED6A19000E24F1 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		EC059C3C28ED6A53000E24F1 /* CoordinatorCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorCase.swift; sourceTree = "<group>"; };
+		EC059C3F28ED6E39000E24F1 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		EC059C4228ED70E3000E24F1 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EC059C4528ED8495000E24F1 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +102,7 @@
 				EC059B9428E8A423000E24F1 /* RxCocoa in Frameworks */,
 				EC059B8E28E8A401000E24F1 /* Then in Frameworks */,
 				EC059B9628E8A423000E24F1 /* RxSwift in Frameworks */,
+				EC059C3728ED652A000E24F1 /* Toast in Frameworks */,
 				EC059B9128E8A40F000E24F1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +230,7 @@
 		EC059B8228E8A19F000E24F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EC059C2F28ED59E5000E24F1 /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -221,9 +246,11 @@
 		EC059B8728E8A271000E24F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EC059C3E28ED6E21000E24F1 /* Coordinator */,
 				EC059BAE28E9EE78000E24F1 /* Base */,
 				EC059BAD28E9EE71000E24F1 /* Extension */,
 				EC059BAC28E9EE57000E24F1 /* DesignSystem */,
+				EC059C2D28ED598A000E24F1 /* ViewModelType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -231,6 +258,7 @@
 		EC059B9B28E9B351000E24F1 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				EC059C4428ED8486000E24F1 /* ViewModel */,
 				EC059B9C28E9B357000E24F1 /* View */,
 				EC059B9D28E9B35A000E24F1 /* ViewController */,
 			);
@@ -258,6 +286,7 @@
 			children = (
 				EC059BA428E9E09E000E24F1 /* View */,
 				EC059BA528E9E0A1000E24F1 /* ViewController */,
+				EC059C4128ED70C2000E24F1 /* ViewModel */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -291,6 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				EC059BAA28E9EE0A000E24F1 /* UITextField + Extension.swift */,
+				EC059C3128ED5C07000E24F1 /* String + Extension.swift */,
+				EC059C3328ED6273000E24F1 /* UIButton + RxExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -299,8 +330,36 @@
 			isa = PBXGroup;
 			children = (
 				EC059B8828E8A27E000E24F1 /* BaseView.swift */,
+				EC059C2B28ED583A000E24F1 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EC059C3E28ED6E21000E24F1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EC059C3828ED69F2000E24F1 /* Coordinator.swift */,
+				EC059C3A28ED6A19000E24F1 /* CoordinatorDelegate.swift */,
+				EC059C3C28ED6A53000E24F1 /* CoordinatorCase.swift */,
+				EC059C3F28ED6E39000E24F1 /* SignUpCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EC059C4128ED70C2000E24F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC059C4228ED70E3000E24F1 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC059C4428ED8486000E24F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC059C4528ED8495000E24F1 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +383,7 @@
 				EC059B9028E8A40F000E24F1 /* SnapKit */,
 				EC059B9328E8A423000E24F1 /* RxCocoa */,
 				EC059B9528E8A423000E24F1 /* RxSwift */,
+				EC059C3628ED652A000E24F1 /* Toast */,
 			);
 			productName = IN_SOPT_Kakao;
 			productReference = EC059B4928E89FB1000E24F1 /* IN_SOPT_Kakao.app */;
@@ -401,6 +461,7 @@
 				EC059B8C28E8A401000E24F1 /* XCRemoteSwiftPackageReference "Then" */,
 				EC059B8F28E8A40F000E24F1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				EC059B9228E8A423000E24F1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				EC059C3528ED652A000E24F1 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = EC059B4A28E89FB1000E24F1 /* Products */;
 			projectDirPath = "";
@@ -444,16 +505,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC059C3B28ED6A19000E24F1 /* CoordinatorDelegate.swift in Sources */,
+				EC059C4328ED70E4000E24F1 /* UserViewModel.swift in Sources */,
+				EC059C2C28ED583A000E24F1 /* BaseViewController.swift in Sources */,
 				EC059BA928E9E0E2000E24F1 /* UserView.swift in Sources */,
+				EC059C4628ED8495000E24F1 /* SignInViewModel.swift in Sources */,
+				EC059C3228ED5C07000E24F1 /* String + Extension.swift in Sources */,
 				EC059B8628E8A232000E24F1 /* SignUpViewController.swift in Sources */,
 				EC059BA728E9E0D2000E24F1 /* UserViewController.swift in Sources */,
 				EC059B8B28E8A29B000E24F1 /* SignUpView.swift in Sources */,
 				EC059B9A28E8A614000E24F1 /* KakaoTextField.swift in Sources */,
+				EC059C4028ED6E39000E24F1 /* SignUpCoordinator.swift in Sources */,
+				EC059C2E28ED598A000E24F1 /* ViewModelType.swift in Sources */,
+				EC059C3928ED69F2000E24F1 /* Coordinator.swift in Sources */,
+				EC059C3028ED59E5000E24F1 /* SignUpViewModel.swift in Sources */,
 				EC059B4D28E89FB1000E24F1 /* AppDelegate.swift in Sources */,
+				EC059C3D28ED6A53000E24F1 /* CoordinatorCase.swift in Sources */,
 				EC059B4F28E89FB1000E24F1 /* SceneDelegate.swift in Sources */,
 				EC059BA228E9B376000E24F1 /* SignInViewController.swift in Sources */,
 				EC059B8928E8A27E000E24F1 /* BaseView.swift in Sources */,
 				EC059BA028E9B36E000E24F1 /* SignInView.swift in Sources */,
+				EC059C3428ED6273000E24F1 /* UIButton + RxExtension.swift in Sources */,
 				EC059B9828E8A522000E24F1 /* KakaoButton.swift in Sources */,
 				EC059BAB28E9EE0A000E24F1 /* UITextField + Extension.swift in Sources */,
 			);
@@ -813,6 +885,14 @@
 				kind = branch;
 			};
 		};
+		EC059C3528ED652A000E24F1 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -835,6 +915,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC059B9228E8A423000E24F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		EC059C3628ED652A000E24F1 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC059C3528ED652A000E24F1 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
