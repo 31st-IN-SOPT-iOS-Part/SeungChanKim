@@ -17,6 +17,12 @@ enum ButtonMode: CaseIterable {
 final class KakaoButton: UIButton {
     
     private var mode: ButtonMode
+    
+    var isValid: Bool = false {
+           didSet {
+               isValid = isEnabled ? true : false
+           }
+       }
 
     init(frame: CGRect, mode: ButtonMode) {
         self.mode = mode
