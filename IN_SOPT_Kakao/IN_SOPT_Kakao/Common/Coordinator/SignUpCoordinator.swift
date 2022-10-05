@@ -20,7 +20,6 @@ final class SignUpCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    
     func start() {
         showSignUpViewController()
     }
@@ -46,4 +45,17 @@ final class SignUpCoordinator: Coordinator {
         }
     }
     
+    func showSignInViewController() {
+        let viewModel = SignInViewModel(coordinator: self)
+        
+        let viewController = SignInViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func popToRootViewController() {
+        navigationController.dismiss(animated: true) {
+            self.navigationController.popToRootViewController(animated: true)
+        }
+    }
 }
