@@ -18,11 +18,9 @@ enum TextFieldMode: CaseIterable {
 
 // enum -> 세가지 케이스
 
-final class KakaoTextField: UIView {
+final class KakaoTextField: UITextField {
     
-    private lazy var textField = UITextField()
-    
-    private lazy var bottomView = UIView().then {
+    lazy var bottomView = UIView().then {
         $0.backgroundColor = .gray
     }
     
@@ -33,7 +31,7 @@ final class KakaoTextField: UIView {
         self.mode = mode
         super.init(frame: frame)
         
-        textField.addLeftPadding()
+        addLeftPadding()
         setupMode(mode: mode)
         setupView()
         setupConstraints()
@@ -44,33 +42,32 @@ final class KakaoTextField: UIView {
     }
     
     private func setupView() {
-        [textField, bottomView].forEach { addSubview($0) }
+        [bottomView].forEach { addSubview($0) }
     }
     
     private func setupConstraints() {
-        textField.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(44)
-        }
         
         bottomView.snp.makeConstraints {
+            $0.top.equalTo(self.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
-            $0.top.equalTo(textField.snp.bottom)
-            $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
     
     private func setupMode(mode: TextFieldMode) {
         switch self.mode {
         case .email:
-            textField.attributedPlaceholder = NSAttributedString(string: "이메일 또는 전화번호",
+            attributedPlaceholder = NSAttributedString(string: "이메일 또는 전화번호",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         case .password:
-            textField.attributedPlaceholder = NSAttributedString(string: "비밀번호",
+            attributedPlaceholder = NSAttributedString(string: "비밀번호",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            isSecureTextEntry = true
         case .checkingPassword:
-            textField.attributedPlaceholder = NSAttributedString(string: "비밀번호 확인",
+            attributedPlaceholder = NSAttributedString(string: "비밀번호 확인",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            isSecureTextEntry = true
         }
     }
 }

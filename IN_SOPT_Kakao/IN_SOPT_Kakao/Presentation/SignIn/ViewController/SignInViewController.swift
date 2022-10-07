@@ -7,10 +7,34 @@
 
 import UIKit
 
-final class SignInViewController: UIViewController {
+import RxSwift
+import RxCocoa
+
+final class SignInViewController: BaseViewController {
     
     private let signInView = SignInView()
-
+    
+    private var viewModel: SignInViewModel
+    
+    private lazy var input = SignInViewModel.Input(
+        didEmailTextChange: signInView.emailTextField.rx.text.orEmpty.asSignal(onErrorJustReturn: ""),
+        didPasswordTextChange: signInView.passwordTextField.rx.text.orEmpty.asSignal(onErrorJustReturn: ""),
+        didCheckingTextChange: signInView.checkingPasswordTextField.rx.text.orEmpty.asSignal(onErrorJustReturn: ""),
+        didNewAccountButtonTapped: signInView.newAccountButton.rx.tap.asSignal())
+    
+    private lazy var output = viewModel.transform(input: input)
+    
+    private let disposeBag = DisposeBag()
+    
+    init(viewModel: SignInViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         self.view = signInView
     }
@@ -18,25 +42,18 @@ final class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        addTarget()
     }
     
-    private func addTarget() {
-        self.signInView.newAccountButton.addTarget(self,
-                                              action: #selector(presentToUserView),
-                                              for: .touchUpInside)
-    }
-    
-    @objc
-    private func presentToUserView() {
-        guard let navigationController = self.navigationController else { return }
+    override func bind() {
+        output.showToastAction
+            .emit(onNext: { [weak self] text in
+                guard let self = self else { return }
+                self.view.makeToast(text, duration: 1, position: .bottom)
+        })
+        .disposed(by: disposeBag)
         
-        let userView = UserViewController(navigation: navigationController)
-        userView.modalTransitionStyle = .crossDissolve
-        userView.modalPresentationStyle = .overCurrentContext
-        
-        self.present(userView, animated: false) {
-            userView.showSheetWithAnimation()
-        }
+        output.isValid
+            .drive(signInView.newAccountButton.rx.isValid)
+            .disposed(by: disposeBag)
     }
 }

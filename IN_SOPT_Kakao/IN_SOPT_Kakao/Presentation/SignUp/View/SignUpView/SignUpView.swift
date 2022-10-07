@@ -23,8 +23,8 @@ final class SignUpView: BaseView {
         $0.numberOfLines = 2
     }
     
-    private lazy var emailTextField = KakaoTextField(frame: CGRect(), mode: .email)
-    private lazy var passwordTextField = KakaoTextField(frame: CGRect(), mode: .password)
+    lazy var emailTextField = KakaoTextField(frame: CGRect(), mode: .email)
+    lazy var passwordTextField = KakaoTextField(frame: CGRect(), mode: .password)
     lazy var loginButton = KakaoButton(frame: CGRect(), mode: .login)
     lazy var newAccountButton = KakaoButton(frame: CGRect(), mode: .newAccount)
     lazy var findAccountButton = KakaoButton(frame: CGRect(), mode: .findAccount)

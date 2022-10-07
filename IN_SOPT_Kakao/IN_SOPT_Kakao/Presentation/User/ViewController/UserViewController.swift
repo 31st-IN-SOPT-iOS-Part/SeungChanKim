@@ -8,14 +8,25 @@
 import UIKit
 
 import SnapKit
+import RxCocoa
+import RxSwift
 
-final class UserViewController: UIViewController {
+final class UserViewController: BaseViewController {
     
     private let userView = UserView()
     
     var navigation: UINavigationController
     
+    private lazy var input = UserViewModel.Input(pressConfirmButton: userView.confirmButton.rx.tap.asSignal())
+    
+    private lazy var output = viewModel.transform(input: input)
+    
+    private let disposeBag = DisposeBag()
+    
     private let sheetHeight = UIScreen.main.bounds.height * 0.4
+    
+    
+    private var viewModel: UserViewModel
     
     override func loadView() {
         self.view = userView
@@ -23,28 +34,27 @@ final class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        style()
-        addTarget()
+ 
     }
     
-    init(navigation: UINavigationController) {
+    init(navigation: UINavigationController, viewModel: UserViewModel) {
+        self.viewModel = viewModel
         self.navigation = navigation
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("UserViewController Error!")
     }
 
-    private func style() {
+    override func style() {
         view.backgroundColor = UIColor(white: 0.1, alpha: 0.5)
     }
     
-    private func addTarget() {
-        userView.confirmButton.addTarget(self,
-                                         action: #selector(popToRootView),
-                                         for: .touchUpInside)
+    override func bind() {
+        output.didConfirmButtonTapped
+            .emit { [weak self] in}
+            .disposed(by: disposeBag)
     }
 }
 
@@ -61,14 +71,6 @@ extension UserViewController {
     
     public func showSheetWithAnimation() {
         self.animatedView(height: sheetHeight)
-    }
-    
-    @objc
-    private func popToRootView() {
-        self.animatedView(height: 0)
-        self.dismiss(animated: true) {
-            self.navigation.popToRootViewController(animated: true)
-        }
     }
     
     func animatedView(height: CGFloat) {

@@ -8,16 +8,21 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    var signUpCoordinator: SignUpCoordinator?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-  
-            guard let windowScene = (scene as? UIWindowScene) else { return }
-            window = UIWindow(windowScene: windowScene)
-            window?.windowScene = windowScene
-            window?.rootViewController = UINavigationController(rootViewController: SignUpViewController())
-            window?.backgroundColor = .white
-            window?.makeKeyAndVisible()
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        let navigationController = UINavigationController()
+        
+        signUpCoordinator = SignUpCoordinator(navigationController)
+        signUpCoordinator?.start()
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
     }
 }
