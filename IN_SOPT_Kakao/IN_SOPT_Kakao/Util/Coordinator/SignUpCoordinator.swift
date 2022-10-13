@@ -7,8 +7,6 @@
 
 import UIKit
 
-import Toast
-
 final class SignUpCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
@@ -39,7 +37,7 @@ final class SignUpCoordinator: Coordinator {
         
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overCurrentContext
-
+        
         navigationController.present(viewController, animated: false) {
             viewController.showSheetWithAnimation()
         }
@@ -57,5 +55,17 @@ final class SignUpCoordinator: Coordinator {
         navigationController.dismiss(animated: true) {
             self.navigationController.popToRootViewController(animated: true)
         }
+    }
+    
+    func connectTabBarCoordinator() {
+        self.navigationController.dismiss(animated: true) {
+            let tabBarCoordinator = TabBarCoordinator(self.navigationController)
+            tabBarCoordinator.start()
+            self.childCoordinators.append(tabBarCoordinator)
+        }
+    }
+    
+    func finish() {
+        delegate?.didFinish(childCoordinator: self)
     }
 }
