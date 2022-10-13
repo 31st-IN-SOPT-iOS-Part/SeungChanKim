@@ -9,4 +9,6 @@ import Foundation
 
 enum CoordinatorCase {
     case auth
+    case tabBar
+    case friend
 }
