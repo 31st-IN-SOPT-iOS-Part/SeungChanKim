@@ -80,4 +80,11 @@ extension SignUpViewModel {
     private func saveEmail(email: String) {
         UserDefaultsManager.email = email
     }
+    
+    func checkEmailPassword(email: String, password: String) -> Bool {
+        if email.isValidEmail() && password.isValidPassword() {
+            return true
+        }
+        return false
+    }
 }
