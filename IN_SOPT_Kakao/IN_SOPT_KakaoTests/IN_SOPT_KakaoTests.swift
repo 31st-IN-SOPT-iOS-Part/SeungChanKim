@@ -9,28 +9,64 @@ import XCTest
 @testable import IN_SOPT_Kakao
 
 class IN_SOPT_KakaoTests: XCTestCase {
+    
+    var sut: SignUpViewModel!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = SignUpViewModel(coordinator: SignUpCoordinator(UINavigationController()))
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_올바른이메일입력() {
+        let input = "23123@dads.com"
+        
+        let result = input.isValidEmail()
+        
+        XCTAssertTrue(result)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_올바르지않은_이메일입력() {
+        let input = "123123"
+        
+        let result = input.isValidEmail()
+        
+        XCTAssertFalse(result)
     }
-
+    
+    func test_올바른_비밀번호입력() {
+        let input = "tmdcks12!!!!"
+        
+        let result = input.isValidPassword()
+        
+        XCTAssertTrue(result)
+    }
+    
+    func test_올바르지않은_비밀번호입력() {
+        let input = "1234"
+        
+        let result = input.isValidPassword()
+        
+        XCTAssertFalse(result)
+    }
+    
+    func test_이메일_패스워드_맞을때() {
+        let email = "chanchu@hansung.ac.kr"
+        let password = "chchch112!"
+        
+        let result = sut.checkEmailPassword(email: email, password: password)
+        
+        XCTAssertTrue(result)
+    }
+    
+    func test_이메일_패스워드_틀릴때() {
+        let email = "chanchu@hansung.ac.kr"
+        let password = "1234"
+        
+        let result = sut.checkEmailPassword(email: email, password: password)
+        
+        XCTAssertFalse(result)
+    }
 }
