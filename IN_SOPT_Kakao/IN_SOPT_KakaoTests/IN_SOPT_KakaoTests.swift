@@ -13,7 +13,7 @@ class IN_SOPT_KakaoTests: XCTestCase {
     var sut: SignUpViewModel!
 
     override func setUpWithError() throws {
-        sut = SignUpViewModel(coordinator: SignUpCoordinator(UINavigationController()))
+        sut = SignUpViewModel(coordinator: DefaultLoginCoordinator(UINavigationController()))
     }
 
     override func tearDownWithError() throws {
