@@ -1,5 +1,5 @@
 //
-//  CoordinatorCase.swift
+//  CoordinatorType.swift
 //  IN_SOPT_Kakao
 //
 //  Created by 김승찬 on 2022/10/05.
@@ -8,7 +8,8 @@
 import Foundation
 
 enum CoordinatorCase {
-    case auth
+    case app
+    case login
     case tabBar
-    case friend
+    case friend, chat
 }
