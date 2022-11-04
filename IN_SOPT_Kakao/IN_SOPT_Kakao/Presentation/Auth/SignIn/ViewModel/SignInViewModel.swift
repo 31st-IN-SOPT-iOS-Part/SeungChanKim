@@ -12,9 +12,9 @@ final class SignInViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
 
-    private weak var coordinator: SignUpCoordinator?
+    private weak var coordinator: DefaultLoginCoordinator?
     
-    init(coordinator: SignUpCoordinator?) {
+    init(coordinator: DefaultLoginCoordinator?) {
         self.coordinator = coordinator
     }
     
