@@ -38,11 +38,15 @@ final class NavigationBar: BaseView {
         $0.setImage(Image.settingImage, for: .normal)
     }
     
+    lazy var plusButton = UIButton().then {
+        $0.setImage(Image.plusImage, for: .normal)
+    }
+    
     private lazy var horizontalStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .fillEqually
         $0.alignment = .center
-        $0.spacing = 10
+        $0.spacing = 0
     }
     
     // MARK: - Initialization
@@ -63,7 +67,7 @@ final class NavigationBar: BaseView {
 
         [navigationTitle, horizontalStackView].forEach { addSubview($0) }
         
-        [searchButton, addFriendButton, musicButton, settingButton]
+        [searchButton, addFriendButton, musicButton, plusButton, settingButton]
             .forEach { horizontalStackView.addArrangedSubview($0) }
     }
     
@@ -80,7 +84,7 @@ final class NavigationBar: BaseView {
         
         horizontalStackView.arrangedSubviews.forEach {
             $0.snp.makeConstraints {
-                $0.width.height.equalTo(40)
+                $0.width.height.equalTo(30)
             }
         }
 
@@ -97,6 +101,8 @@ final class NavigationBar: BaseView {
             self.navigationTitle.text = "친구"
         case .chat:
             self.navigationTitle.text = "채팅"
+            [searchButton, addFriendButton, musicButton]
+                .forEach { $0.isHidden = true }
         case .myView:
             self.navigationTitle.text = "뷰"
         case .shop:

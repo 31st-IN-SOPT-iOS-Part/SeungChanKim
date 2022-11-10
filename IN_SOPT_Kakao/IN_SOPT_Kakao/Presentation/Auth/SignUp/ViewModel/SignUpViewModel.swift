@@ -12,7 +12,7 @@ final class SignUpViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
     
-    private weak var coordinator: SignUpCoordinator?
+    private weak var coordinator: DefaultLoginCoordinator?
     
     struct Input {
         let didEmailTextChange: Signal<String>
@@ -30,7 +30,7 @@ final class SignUpViewModel: ViewModelType {
     private let isValidPassword = BehaviorRelay<Bool>(value: false)
     private let showToastAction = PublishRelay<String>()
     
-    init(coordinator: SignUpCoordinator?) {
+    init(coordinator: DefaultLoginCoordinator?) {
         self.coordinator = coordinator
     }
     
